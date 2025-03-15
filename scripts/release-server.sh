@@ -10,19 +10,19 @@ SERVICE_NAME="server"
 cd "$PROJECT_ROOT" || exit
 
 # Setup documentation template
-pushd "documentation/templates" >/dev/null || exit
+pushd "scripts/semantic-release/templates" >/dev/null || exit
 
-rm -rf documentation/
-mkdir -p "documentation/docs/"
-cp -r .base_changelog_template/ "documentation/docs/$SERVICE_NAME"
+rm -rf scripts/semantic-release/documentation/
+mkdir -p "scripts/semantic-release/documentation/docs/"
+cp -r .base_changelog_template/ "scripts/semantic-release/documentation/docs/$SERVICE_NAME"
 
 popd >/dev/null || exit
 
 # Release the service
-pushd "poweralpha/services/$SERVICE_NAME" >/dev/null || exit
+pushd "packages/$SERVICE_NAME" >/dev/null || exit
 
 printf '%s\n' "Releasing $SERVICE_NAME..."
-"$VIRTUAL_ENV/bin/semantic-release" -v version --no-push
+"$VIRTUAL_ENV/bin/semantic-release" -vv version
 
 # printf '%s\n' "Writing changelog for $SERVICE_NAME..."
 # "$VIRTUAL_ENV/bin/semantic-release" -v changelog
