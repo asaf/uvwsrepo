@@ -1,5 +1,5 @@
-__version__ = "1.2.1"
+__version__ = "0.1.0"
 
 
 def main() -> None:
-    print("Hello from api, expecting v0.1.8 with publish #5")
+    print("Hello from api, expecting v0.0.2 with publish #5")
