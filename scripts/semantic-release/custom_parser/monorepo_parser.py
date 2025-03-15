@@ -78,9 +78,9 @@ class ConventionalMonorepoParserOptions(ParserOptions):
     via `!` prefix. Paths should be relative to the current working directory.
     """
 
-    scope_prefix: str = ""
+    scope_pattern: str = ""
     """
-    A prefix that will be striped from the scope when parsing commit messages.
+    A regex pattern that will be used to match the scope when parsing commit messages.
 
     If set, it will cause unscoped commits to be ignored. Use this in tandem with
     the path_filter option to filter commits by directory and scope.
@@ -219,11 +219,12 @@ class ConventionalCommitMonorepoParser(
                 [
                     r"^" + commit_type_pattern.pattern,
                     r"(?:\("
-                    + self.options.scope_prefix
-                    + r"(?P<scope>(?:-[^\n]+|))\))?",
+                    + r"(?P<scope>"
+                    + self.options.scope_pattern
+                    + r")\))?",  # Use scope_pattern instead of scope_prefix
                     r"(?P<break>!)?:\s+",
                     r"(?P<subject>[^\n]+)",
-                    r"(?:\n\n(?P<text>.+))?",  # commit body
+                    r"(?:\n\n(?P<text>.+))?",  # Commit body (optional)
                 ],
             ),
             flags=re.DOTALL,
@@ -364,7 +365,7 @@ class ConventionalCommitMonorepoParser(
         # 3. commit message is a valid conventional commit but not scoped and files are in the directory -- ParsedCommit
         # 4. commit message is a valid conventional commit but is scoped but files are NOT in the directory -- ParsedCommit
         # 5. commit message is a valid conventional commit but is scoped and files are in the directory -- ParsedCommit
-        # If you want to allow unscoped commits, set the scope_prefix to an empty string
+        # If you want to allow unscoped commits, set the scope_pattern to an empty string
         # Which adds more variants to 2-5.
 
         if len(relevant_changed_files) == 0:
@@ -376,21 +377,21 @@ class ConventionalCommitMonorepoParser(
                         str.join(
                             " ",
                             [
-                                f"Commit {commit.hexsha[:7]} is not scoped with the scope prefix {self.options.scope_prefix}",
+                                f"Commit {commit.hexsha[:7]} is not scoped with the scope prefix {self.options.scope_pattern}",
                                 "and has no changed files in the path filter(s)",
                                 f"relative to the git root {git_root}",
                             ],
                         )
-                        if self.options.scope_prefix
-                        and self.options.scope_prefix
+                        if self.options.scope_pattern
+                        and self.options.scope_pattern
                         not in commit.message.split("\n", maxsplit=1)[0]
                         # No prefix was defined, and the files don't match the path filter, and the commit message is not a valid conventional commit
                         else f"Format Mismatch! Unable to parse commit message: {commit.message!r}"
                     ),
                 )
 
-            if not self.options.scope_prefix:
-                # No prefix was defined, and the files don't match the path filter, but the commit message is a valid conventional commit
+            if not self.options.scope_pattern:
+                # No scope pattern was defined, and the files don't match the path filter, but the commit message is a valid conventional commit
                 return _logged_parse_error(
                     commit,
                     str.join(
@@ -408,10 +409,10 @@ class ConventionalCommitMonorepoParser(
                 (
                     (
                         # you have defined a scope prefix and the result fails to match -- ParseError
-                        f"Commit {commit.hexsha[:7]} scope does not match scope prefix {self.options.scope_prefix}"
+                        f"Commit {commit.hexsha[:7]} scope does not match scope prefix {self.options.scope_pattern}"
                     )
-                    if self.options.scope_prefix
-                    and self.options.scope_prefix not in commit.message.split("\n")[0]
+                    if self.options.scope_pattern
+                    and self.options.scope_pattern not in commit.message.split("\n")[0]
                     # The commit message is not a valid conventional commit
                     else f"Format Mismatch! Unable to parse commit message: {commit.message!r}"
                 ),
