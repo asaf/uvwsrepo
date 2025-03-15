@@ -33,9 +33,10 @@ scope_pattern = 'api(?:-[\w-]+)?'
 scope_optional = false
 
 [tool.semantic_release.changelog]
-template_dir = "../../documentation/templates"
+template_dir = "../../scripts/semantic-release/templates"
 mode = "update"
 exclude_commit_patterns = [
+    '''^[a-z]+: .+''',  # Exclude commits without a scope
     '''^[a-z]+\((?!api)[^)]+\): .+''',  # skip all that are not api* scoped
     ".*\\[skip ci\\].*",
     "Initial [Cc]ommit",
