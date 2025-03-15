@@ -2,6 +2,14 @@
 
 <!-- version list -->
 
+## v0.1.1 (2025-03-15)
+
+### Bug Fixes
+
+- Yey new change
+  ([`e000c5a`](https://github.com/asaf/uvwsrepo/commit/e000c5aad7f05d017dbc4ae7ca697c0460b1fbd9))
+
+
 ## v0.1.0 (2025-03-15)
 
 ### Bug Fixes
