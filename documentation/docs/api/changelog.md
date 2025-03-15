@@ -2,6 +2,13 @@
 
 <!-- version list -->
 
+## v0.2.14 (2025-03-15)
+
+### Bug Fixes
+
+- **api**: Another  ([`c633107`](https://github.com/asaf/uvwsrepo/commit/c633107bdd02dde965d4ec504943091405f11038))
+
+
 ## v0.2.13 (2025-03-15)
 
 ### Bug Fixes
