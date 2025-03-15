@@ -2,7 +2,7 @@
 
 <!-- version list -->
 
-## v0.1.1 (2025-03-15)
+## v0.1.0 (2025-03-15)
 
 ### Bug Fixes
 
@@ -10,16 +10,13 @@
 
 ### Chores
 
-- New stuff ([`41f54f7`](https://github.com/asaf/uvwsrepo/commit/41f54f7eebfabc81a8a9d626e4b8cdefb952657a))
-
-
-## v0.1.0 (2025-03-15)
-
-### Chores
-
 - Another generic change ([`14a45e0`](https://github.com/asaf/uvwsrepo/commit/14a45e02f4b197a80657552d454f27beaeedc52b))
 
+- Api changes ([`86041fc`](https://github.com/asaf/uvwsrepo/commit/86041fcd71bb81900e05317a1d18189661cf39ea))
+
 - Change  ([`0d69db6`](https://github.com/asaf/uvwsrepo/commit/0d69db60fa28ec3bd393fb5e3ca15d815816a775))
+
+- Cleaning up everything ([`170e290`](https://github.com/asaf/uvwsrepo/commit/170e290aee37f236383cf147fb233340dc26a939))
 
 - Fix script ([`d9abcda`](https://github.com/asaf/uvwsrepo/commit/d9abcda09fff7f0a0b2ea4007ee743dbb35dd580))
 
@@ -27,11 +24,19 @@
 
 - Fixing release-server script ([`5c2b7ba`](https://github.com/asaf/uvwsrepo/commit/5c2b7ba16d0b3c5785fd1e10a8a3e3b6b3d5c1d0))
 
+- New stuff ([`41f54f7`](https://github.com/asaf/uvwsrepo/commit/41f54f7eebfabc81a8a9d626e4b8cdefb952657a))
+
+- Release all ([`98359ca`](https://github.com/asaf/uvwsrepo/commit/98359cab58df8e93efb812e31f61bb73dc3fd4f6))
+
+- Scripts  ([`6723c14`](https://github.com/asaf/uvwsrepo/commit/6723c14173f1c31d6fc0eba9499a7915d1ec0214))
+
 - Scripts  ([`b91b7cb`](https://github.com/asaf/uvwsrepo/commit/b91b7cba3919d84b0e6db61ec27f8e0af7fcd993))
 
 - Scripts and docs ([`b59addf`](https://github.com/asaf/uvwsrepo/commit/b59addf0c1f01446fcdf012114cf0c6865e67370))
 
 - With push ([`4cc7d3b`](https://github.com/asaf/uvwsrepo/commit/4cc7d3b49a1037898d486229a353ccef01840ef2))
+
+- Yey  ([`362cac2`](https://github.com/asaf/uvwsrepo/commit/362cac2cae888e2a14f32c8b7e6e60d9f76d9e71))
 
 - Yey  ([`78a1ff1`](https://github.com/asaf/uvwsrepo/commit/78a1ff1c2f31d05d4a440e06563ab119a3db9082))
 
