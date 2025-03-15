@@ -1,6 +1,6 @@
 [project]
 name = "api"
-version = "0.2.6"
+version = "0.2.7"
 description = "Add your description here"
 readme = "README.md"
 authors = [
@@ -36,8 +36,7 @@ scope_optional = false
 template_dir = "../../documentation/templates"
 mode = "update"
 exclude_commit_patterns = [
-    '''^[a-z]+: .+''',  # Exclude commits without a scope
-    '''^[a-z]+\((?!api)[^)]+\): .+''',  # skip all that are not api* scoped
+    
     ".*\\[skip ci\\].*",
     "Initial [Cc]ommit",
 ]
