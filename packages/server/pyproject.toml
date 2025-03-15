@@ -35,6 +35,7 @@ scope_prefix = "server"
 template_dir = "../../scripts/semantic-release/templates"
 mode = "update"
 exclude_commit_patterns = [
+    '''^[a-z]+: .+''',  # Exclude commits without a scope
     '''^[a-z]+\((?!server)[^)]+\): .+''',  # skip all that are not server* scoped
     ".*\\[skip ci\\].*",
     "Initial [Cc]ommit",
