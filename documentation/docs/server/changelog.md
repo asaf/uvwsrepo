@@ -2,6 +2,14 @@
 
 <!-- version list -->
 
+## v0.1.10 (2025-03-15)
+
+### Bug Fixes
+
+- Server change! to 0.1.3
+  ([`c1460d4`](https://github.com/asaf/uvwsrepo/commit/c1460d485a14f654fef011a0aa46af409c572c5f))
+
+
 ## v0.1.9 (2025-03-15)
 
 ### Bug Fixes
