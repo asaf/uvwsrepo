@@ -9,7 +9,6 @@ cd "$PROJECT_ROOT" || exit
 
 SERVICE_NAME="api"
 
-
 # Setup documentation template
 pushd "documentation/templates" >/dev/null || exit
 
