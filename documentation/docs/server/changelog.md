@@ -2,6 +2,14 @@
 
 <!-- version list -->
 
+## v0.2.2 (2025-03-15)
+
+### Bug Fixes
+
+- **server**: Server goes minor
+  ([`f5262e5`](https://github.com/asaf/uvwsrepo/commit/f5262e512780f6b63a81a37a7672a70112e62065))
+
+
 ## v0.2.1 (2025-03-15)
 
 ### Bug Fixes
