@@ -1,6 +1,6 @@
 [project]
 name = "api"
-version = "0.2.16"
+version = "0.2.17"
 description = "Add your description here"
 readme = "README.md"
 authors = [
@@ -32,17 +32,6 @@ version_variables = ["src/api/__init__.py:__version__"]
 scope_pattern = 'api(?:-[\w-]+)?'
 scope_optional = false
 
-
-[tool.semantic_release.changelog]
-template_dir = "../../documentation/templates"
-mode = "update"
-exclude_commit_patterns = [
-    '''^[a-z]+: .+''',  # Exclude commits without a scope
-    '''^[a-z]+\((?!api)[^)]+\): .+''',  # skip all that are not api* scoped
-    ".*\\[skip ci\\].*",
-    "Initial [Cc]ommit",
-]
-
 [semantic_release.branches.main]
 match = "main"
 prerelease = false
@@ -51,13 +40,6 @@ prerelease = false
 match = "beta"
 prerelease = true
 prerelease_token = "beta"
-
-[tool.semantic_release.changelog.default_templates]
-mask_initial_release = true
-# must set here because the default is not the same as the default in the other service &
-# must be the final destination filename for the changelog relative to this file
-changelog_file = "./documentation/docs/api/CHANGELOG.md"
-
 
 [tool.semantic_release.publish]
 dist_glob_patterns = ["../../dist/api-*"]
