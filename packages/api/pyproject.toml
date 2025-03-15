@@ -56,7 +56,7 @@ prerelease_token = "beta"
 mask_initial_release = true
 # must set here because the default is not the same as the default in the other service &
 # must be the final destination filename for the changelog relative to this file
-changelog_file = "./CHANGELOG.md"
+changelog_file = "./documentation/docs/api/CHANGELOG.md"
 
 
 [tool.semantic_release.publish]
