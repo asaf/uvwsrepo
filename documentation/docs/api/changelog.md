@@ -2,6 +2,13 @@
 
 <!-- version list -->
 
+## v0.2.13 (2025-03-15)
+
+### Bug Fixes
+
+- **api**: Api change: ([`26cb80c`](https://github.com/asaf/uvwsrepo/commit/26cb80c68e45b4c90dad951169fe846515470ea7))
+
+
 ## v0.2.12 (2025-03-15)
 
 ### Bug Fixes
