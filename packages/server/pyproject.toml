@@ -28,6 +28,9 @@ tag_format = "server-{version}"
 version_toml = ["pyproject.toml:project.version"]
 version_variables = ["src/server/__init__.py:__version__"]
 
+[tool.semantic_release.publish]
+dist_glob_patterns = ["../../dist/server*"]
+
 [tool.semantic_release.commit_parser_options]
 scope_prefix = "server"
 

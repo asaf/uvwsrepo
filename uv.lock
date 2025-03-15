@@ -11,15 +11,15 @@ members = [
 
 [[package]]
 name = "api"
-version = "0.1.0"
+version = "0.1.1"
 source = { editable = "packages/api" }
 
 [[package]]
 name = "server"
-version = "0.1.0"
+version = "0.1.8"
 source = { editable = "packages/server" }
 
 [[package]]
 name = "wsrepo"
 version = "0.1.0"
-source = { virtual = "." }
+source = { editable = "." }
