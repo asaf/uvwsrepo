@@ -2,6 +2,19 @@
 
 <!-- version list -->
 
+## v0.1.5 (2025-03-15)
+
+### Bug Fixes
+
+- Yey
+  ([`427023c`](https://github.com/asaf/uvwsrepo/commit/427023ccc6cd3a2cc6538b023b9555c029cb3f8b))
+
+### Chores
+
+- With push
+  ([`4cc7d3b`](https://github.com/asaf/uvwsrepo/commit/4cc7d3b49a1037898d486229a353ccef01840ef2))
+
+
 ## v0.1.4 (2025-03-15)
 
 ### Bug Fixes
