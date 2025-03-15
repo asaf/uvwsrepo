@@ -49,3 +49,6 @@ prerelease = false
 match = "beta"
 prerelease = true
 prerelease_token = "beta"
+
+[tool.semantic_release.publish]
+dist_glob_patterns = ["./dist/wsrepo-*"]

@@ -28,9 +28,6 @@ tag_format = "server-{version}"
 version_toml = ["pyproject.toml:project.version"]
 version_variables = ["src/server/__init__.py:__version__"]
 
-[tool.semantic_release.publish]
-dist_glob_patterns = ["../../dist/server-*"]
-
 [tool.semantic_release.commit_parser_options]
 scope_prefix = "server"
 
@@ -58,3 +55,6 @@ mask_initial_release = true
 # must set here because the default is not the same as the default in the other service &
 # must be the final destination filename for the changelog relative to this file
 changelog_file = "../../documentation/docs/server/changelog.md"
+
+[tool.semantic_release.publish]
+dist_glob_patterns = ["../../dist/server-*"]
