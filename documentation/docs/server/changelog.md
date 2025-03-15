@@ -2,6 +2,13 @@
 
 <!-- version list -->
 
+## v0.2.3 (2025-03-15)
+
+### Bug Fixes
+
+- **server**: Bimping!  ([`626fb4f`](https://github.com/asaf/uvwsrepo/commit/626fb4f09a8e6726397a466424f40d2b7b4de680))
+
+
 ## v0.2.2 (2025-03-15)
 
 ### Bug Fixes
