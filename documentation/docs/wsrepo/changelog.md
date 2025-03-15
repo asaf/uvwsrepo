@@ -2,6 +2,27 @@
 
 <!-- version list -->
 
+## v0.1.1 (2025-03-15)
+
+### Bug Fixes
+
+- A new script ([`7fa0c08`](https://github.com/asaf/uvwsrepo/commit/7fa0c0861d4bee996ee3286d09e456c61e06dbc3))
+
+- **init**: Another fix to init muhaha ([`87a5f82`](https://github.com/asaf/uvwsrepo/commit/87a5f820fb7e9d0dcdb07f908f270194644e6c0d))
+
+### Chores
+
+- All changes ([`aa592be`](https://github.com/asaf/uvwsrepo/commit/aa592bedf6dafbe9400ee8448967e406a706a38a))
+
+- Attempt  ([`aa8e17a`](https://github.com/asaf/uvwsrepo/commit/aa8e17ac1ae064b0d73338699bcca6374b5bb773))
+
+- Change to readme ([`cdcc8d3`](https://github.com/asaf/uvwsrepo/commit/cdcc8d384175fad08a36483955038427a25d6d7e))
+
+- Readme!  ([`ec0bc23`](https://github.com/asaf/uvwsrepo/commit/ec0bc236f17598f0ba4a30ac7c515a5176a7c528))
+
+- Scripts changes ([`7db3c88`](https://github.com/asaf/uvwsrepo/commit/7db3c88b9c6060fd448cc9777a4250b9a7289846))
+
+
 ## v0.1.0 (2025-03-15)
 
 ### Bug Fixes
