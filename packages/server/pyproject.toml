@@ -48,3 +48,9 @@ prerelease = false
 match = "beta"
 prerelease = true
 prerelease_token = "beta"
+
+[tool.semantic_release.changelog.default_templates]
+mask_initial_release = true
+# must set here because the default is not the same as the default in the other service &
+# must be the final destination filename for the changelog relative to this file
+changelog_file = "../../documentation/docs/server/changelog.md"
