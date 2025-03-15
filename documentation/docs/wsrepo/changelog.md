@@ -2,6 +2,17 @@
 
 <!-- version list -->
 
+## v0.1.2 (2025-03-15)
+
+### Bug Fixes
+
+- Minor repo change ([`007c5d5`](https://github.com/asaf/uvwsrepo/commit/007c5d58f026f7b43e56f98fda856535aca94a9c))
+
+### Chores
+
+- This is a change to script ([`82f5624`](https://github.com/asaf/uvwsrepo/commit/82f5624ddb0700533e1eb99eb6402fdd5f46a27c))
+
+
 ## v0.1.1 (2025-03-15)
 
 ### Bug Fixes
