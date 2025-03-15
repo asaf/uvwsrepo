@@ -10,7 +10,7 @@ SERVICE_NAME="api"
 cd "$PROJECT_ROOT" || exit
 
 # Setup documentation template
-pushd "scripts/semantic-release/documentation/templates" >/dev/null || exit
+pushd "scripts/semantic-release/templates" >/dev/null || exit
 
 rm -rf scripts/semantic-release/documentation/
 mkdir -p "scripts/semantic-release/documentation/docs/"
@@ -22,7 +22,7 @@ popd >/dev/null || exit
 pushd "packages/$SERVICE_NAME" >/dev/null || exit
 
 printf '%s\n' "Releasing $SERVICE_NAME..."
-"$VIRTUAL_ENV/bin/semantic-release" -vv --noop version --print
+"$VIRTUAL_ENV/bin/semantic-release" -vv version
 
 # printf '%s\n' "Writing changelog for $SERVICE_NAME..."
 # "$VIRTUAL_ENV/bin/semantic-release" -v changelog

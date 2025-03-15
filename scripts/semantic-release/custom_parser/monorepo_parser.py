@@ -218,7 +218,9 @@ class ConventionalCommitMonorepoParser(
                 "",
                 [
                     r"^" + commit_type_pattern.pattern,
-                    r"(?:\(" + self.options.scope_prefix + r"(?P<scope>[^\n]+)\))?",
+                    r"(?:\("
+                    + self.options.scope_prefix
+                    + r"(?P<scope>(?:-[^\n]+|))\))?",
                     r"(?P<break>!)?:\s+",
                     r"(?P<subject>[^\n]+)",
                     r"(?:\n\n(?P<text>.+))?",  # commit body
@@ -279,6 +281,7 @@ class ConventionalCommitMonorepoParser(
         return accumulator
 
     def parse_message(self, message: str) -> ParsedMessageResult | None:
+        print("WOW!!!!!!!!!", message, parsed := self.re_parser.match(message))
         if not (parsed := self.re_parser.match(message)):
             return None
 
