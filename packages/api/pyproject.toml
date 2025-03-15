@@ -1,6 +1,6 @@
 [project]
 name = "api"
-version = "0.1.1"
+version = "0.1.2"
 description = "Add your description here"
 readme = "README.md"
 authors = [
@@ -29,7 +29,7 @@ version_toml = ["pyproject.toml:project.version"]
 version_variables = ["src/api/__init__.py:__version__"]
 
 [tool.semantic_release.commit_parser_options]
-server_scope_pattern = 'api(?:-[\w-]+)?'
+scope_pattern = 'api(?:-[\w-]+)?'
 scope_optional = false
 
 [tool.semantic_release.changelog]
