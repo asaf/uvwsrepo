@@ -2,6 +2,16 @@
 
 <!-- version list -->
 
+## v0.2.0 (2025-03-15)
+
+### Features
+
+- A major change should release v2.0.0
+  ([`af1447a`](https://github.com/asaf/uvwsrepo/commit/af1447a6abbca43fc9f64fde0d5fcc9255ec37a4))
+
+wow.. this is a big change!
+
+
 ## v0.1.0 (2025-03-15)
 
 - Initial Release
