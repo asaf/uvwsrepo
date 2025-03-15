@@ -20,7 +20,7 @@ popd >/dev/null || exit
 
 # Release the service
 printf '%s\n' "Releasing $SERVICE_NAME..."
-"$VIRTUAL_ENV/bin/semantic-release" -vv --noop version
+"$VIRTUAL_ENV/bin/semantic-release" -v version
 
 # "$VIRTUAL_ENV/bin/semantic-release" -v publish
 

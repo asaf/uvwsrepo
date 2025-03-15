@@ -22,7 +22,7 @@ popd >/dev/null || exit
 pushd "packages/$SERVICE_NAME" >/dev/null || exit
 
 printf '%s\n' "Releasing $SERVICE_NAME..."
-"$VIRTUAL_ENV/bin/semantic-release" -vv --noop version
+"$VIRTUAL_ENV/bin/semantic-release" -v version
 
 #"$VIRTUAL_ENV/bin/semantic-release" -v publish
 
