@@ -29,19 +29,19 @@ version_toml = ["pyproject.toml:project.version"]
 version_variables = ["src/api/__init__.py:__version__"]
 
 [tool.semantic_release.commit_parser_options]
-path_filters = [
-    ".",
-    "../../../documentation/docs/api/**",
-    "!../../../documentation/docs/api/changelog.md",
-]
 scope_prefix = "api"
 
-[semantic_release.commit_parser_options]
-default_bump_level = 0
+[tool.semantic_release.changelog]
+template_dir = "../../documentation/templates"
+mode = "update"
+exclude_commit_patterns = [
+    '''^[a-z]+\((?!api)[^)]+\): .+''',  # skip all that are not api* scoped
+    ".*\\[skip ci\\].*",
+    "Initial [Cc]ommit",
+]
 
 [semantic_release.branches.main]
 match = "main"
-prerelease_token = "rc"
 prerelease = false
 
 [semantic_release.branches.beta]
