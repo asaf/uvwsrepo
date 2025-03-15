@@ -281,7 +281,6 @@ class ConventionalCommitMonorepoParser(
         return accumulator
 
     def parse_message(self, message: str) -> ParsedMessageResult | None:
-        print("WOW!!!!!!!!!", message, parsed := self.re_parser.match(message))
         if not (parsed := self.re_parser.match(message)):
             return None
 
