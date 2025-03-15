@@ -2,6 +2,22 @@
 
 <!-- version list -->
 
+## v0.1.3 (2025-03-15)
+
+### Bug Fixes
+
+- Another change in server!
+  ([`9cf08cd`](https://github.com/asaf/uvwsrepo/commit/9cf08cdfbfe43d771f917adcdd40d1083eff494e))
+
+### Chores
+
+- Another generic change
+  ([`14a45e0`](https://github.com/asaf/uvwsrepo/commit/14a45e02f4b197a80657552d454f27beaeedc52b))
+
+- Scripts and docs
+  ([`b59addf`](https://github.com/asaf/uvwsrepo/commit/b59addf0c1f01446fcdf012114cf0c6865e67370))
+
+
 ## v0.1.2 (2025-03-15)
 
 ### Bug Fixes
