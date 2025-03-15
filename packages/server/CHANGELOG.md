@@ -2,6 +2,14 @@
 
 <!-- version list -->
 
+## v0.1.4 (2025-03-15)
+
+### Bug Fixes
+
+- Yey another serer changeee
+  ([`3a66d5c`](https://github.com/asaf/uvwsrepo/commit/3a66d5cb877f19c2a2bdd620e1bab1f320fda678))
+
+
 ## v0.1.3 (2025-03-15)
 
 ### Bug Fixes
