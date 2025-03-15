@@ -2,6 +2,19 @@
 
 <!-- version list -->
 
+## v0.2.1 (2025-03-15)
+
+### Bug Fixes
+
+- **server**: Small change :)
+  ([`f1ddd8c`](https://github.com/asaf/uvwsrepo/commit/f1ddd8c9c32837b2ab43827d79338f49e6d3d42a))
+
+### Chores
+
+- **server**: Readme
+  ([`e7e2706`](https://github.com/asaf/uvwsrepo/commit/e7e270613d108a675e4ee1eeb5f0446aceb22e15))
+
+
 ## v0.2.0 (2025-03-15)
 
 ### Features

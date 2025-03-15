@@ -1,6 +1,6 @@
 [project]
 name = "server"
-version = "0.2.0"
+version = "0.2.1"
 description = "Add your description here"
 readme = "README.md"
 authors = [
@@ -29,7 +29,8 @@ version_toml = ["pyproject.toml:project.version"]
 version_variables = ["src/server/__init__.py:__version__"]
 
 [tool.semantic_release.commit_parser_options]
-scope_prefix = "server"
+scope_pattern = "server(-.*)?"
+
 
 [tool.semantic_release.changelog]
 template_dir = "../../scripts/semantic-release/templates"
