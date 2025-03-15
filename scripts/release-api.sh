@@ -5,9 +5,10 @@ set -e
 PROJECT_ROOT="$(dirname "$(dirname "$(readlink -f "${BASH_SOURCE[0]}")")")"
 VIRTUAL_ENV="$PROJECT_ROOT/.venv"
 
+cd "$PROJECT_ROOT" || exit
+
 SERVICE_NAME="api"
 
-cd "$PROJECT_ROOT" || exit
 
 # Setup documentation template
 pushd "documentation/templates" >/dev/null || exit
