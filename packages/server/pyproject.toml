@@ -29,7 +29,8 @@ version_toml = ["pyproject.toml:project.version"]
 version_variables = ["src/server/__init__.py:__version__"]
 
 [tool.semantic_release.commit_parser_options]
-scope_pattern = "server(-.*)?"
+server_scope_pattern = 'server(?:-[\w-]+)?'
+scope_optional = false
 
 
 [tool.semantic_release.changelog]

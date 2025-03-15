@@ -86,6 +86,11 @@ class ConventionalMonorepoParserOptions(ParserOptions):
     the path_filter option to filter commits by directory and scope.
     """
 
+    scope_optional: bool = False
+    """
+    A boolean flag that determines whether the scope is optional or required.
+    """
+
     @field_validator("path_filters", mode="before")
     @classmethod
     def convert_strs_to_paths(cls, value: Any) -> Tuple[Path]:
@@ -211,6 +216,14 @@ class ConventionalCommitMonorepoParser(
                 )
             ) from err
 
+        # Depending on whether a scope is optional, wrap the scope pattern accordingly.
+        if self.options.scope_optional:
+            # The entire group (parentheses around the scope) is optional.
+            scope_regex = r"(?:\((?P<scope>" + self.options.scope_pattern + r")\))?"
+        else:
+            # The scope group is required.
+            scope_regex = r"\((?P<scope>" + self.options.scope_pattern + r")\)"
+
         # We add the any scope prefix into the pattern so that we can match it but also we don't include it in the
         # scope match, which implicitly strips it from being included in the returned scope.
         self.re_parser = regexp(
@@ -218,10 +231,7 @@ class ConventionalCommitMonorepoParser(
                 "",
                 [
                     r"^" + commit_type_pattern.pattern,
-                    r"(?:\("
-                    + r"(?P<scope>"
-                    + self.options.scope_pattern
-                    + r")\))?",  # Use scope_pattern instead of scope_prefix
+                    scope_regex,
                     r"(?P<break>!)?:\s+",
                     r"(?P<subject>[^\n]+)",
                     r"(?:\n\n(?P<text>.+))?",  # Commit body (optional)

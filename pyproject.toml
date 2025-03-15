@@ -30,7 +30,9 @@ version_toml = ["pyproject.toml:project.version"]
 version_variables = ["src/wsrepo/__init__.py:__version__"]
 
 [tool.semantic_release.commit_parser_options]
-scope_pattern = "^(?!server$|server-.*|api$|api-.*).*$"
+scope_pattern = '(?!(?:server|api)(?:-|(?=\))))[\w-]+'
+scope_optional = true
+
 
 [tool.semantic_release.changelog]
 template_dir = "./documentation/templates"
