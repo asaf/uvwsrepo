@@ -2,6 +2,19 @@
 
 <!-- version list -->
 
+## v0.1.2 (2025-03-15)
+
+### Bug Fixes
+
+- Yeyyy
+  ([`f9b9e2b`](https://github.com/asaf/uvwsrepo/commit/f9b9e2b1eb5c019e3f8a3cca419c3039536a026e))
+
+### Chores
+
+- Fixing release-server script
+  ([`5c2b7ba`](https://github.com/asaf/uvwsrepo/commit/5c2b7ba16d0b3c5785fd1e10a8a3e3b6b3d5c1d0))
+
+
 ## v0.1.1 (2025-03-15)
 
 ### Bug Fixes
